@@ -7,6 +7,7 @@ function Search({ searchTerm, onSearchChange }) {
       placeholder="Type a name to search..."
       value={searchTerm}
       onChange={(e) => onSearchChange(e.target.value)}
+      className="searchbar"
     />
   );
 }

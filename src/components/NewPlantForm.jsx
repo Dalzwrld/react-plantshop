@@ -22,7 +22,7 @@ function NewPlantForm({ onAddPlant }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="new-plant-form">
       <input
         placeholder="Plant name"
         value={name}

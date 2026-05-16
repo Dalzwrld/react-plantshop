@@ -27,7 +27,7 @@ in the browser to verify that your backend is working before you proceed!
 
 ## Endpoints
 
-The base URL for your backend is: `http://localhost:6001`
+The base URL for your backend is: `http://localhost:6001/plants`
 
 ## Deliverables
 
