@@ -10,7 +10,6 @@ function App() {
     fetch("http://localhost:6001/plants")
       .then((res) => res.json())
       .then((data) => {
-        // Add stock property manually
         const plantsWithStock = data.map((plant) => ({
           ...plant,
           inStock: true,
@@ -19,7 +18,6 @@ function App() {
       });
   }, []);
 
-  // ➕ Add plant
   function handleAddPlant(newPlant) {
     fetch("http://localhost:6001/plants", {
       method: "POST",
@@ -37,7 +35,6 @@ function App() {
       });
   }
 
-  // 🔁 Toggle stock
   function handleToggleStock(id) {
     const updatedPlants = plants.map((plant) =>
       plant.id === id
@@ -47,7 +44,6 @@ function App() {
     setPlants(updatedPlants);
   }
 
-  // 🔍 Filter plants
   const filteredPlants = plants.filter((plant) =>
     plant.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
