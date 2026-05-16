@@ -6,9 +6,13 @@ import Search from "./Search";
 function PlantPage() {
   return (
     <main>
-      <NewPlantForm />
-      <Search />
-      <PlantList />
+      <h1>Plantsy 🌿</h1>
+
+      <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+
+      <NewPlantForm onAddPlant={handleAddPlant} />
+
+      <PlantList plants={filteredPlants} onToggleStock={handleToggleStock} />
     </main>
   );
 }
