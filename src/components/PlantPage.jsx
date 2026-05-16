@@ -6,8 +6,6 @@ import Search from "./Search";
 function PlantPage() {
   return (
     <main>
-      <h1>Plantsy 🌿</h1>
-
       <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
       <NewPlantForm onAddPlant={handleAddPlant} />
